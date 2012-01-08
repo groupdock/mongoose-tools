@@ -1,0 +1,25 @@
+{
+  "author": "Tim Oxley <secoif@gmail.com>",
+  "name": "mongoose-toolbox",
+  "description": "Small number of tools we share across mongoose projects.",
+  "version": "0.0.0",
+  "repository": {
+    "url": ""
+  },
+  "scripts": {
+    "test": "mocha --ui tdd test/*/*"
+  },
+  "engines": {
+    "node": "~0.6.6"
+  },
+  "dependencies": {
+    "mongoose": "~2.4.9",
+    "underscore": "~1.2.4",
+    "async": "~0.1.15"
+  },
+  "devDependencies": {
+    "chai": "~0.1.6",
+    "mocha": "~0.8.1",
+    "sugar": "~1.1.3"
+  }
+}
