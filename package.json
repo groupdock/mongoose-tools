@@ -2,7 +2,7 @@
   "author": "Tim Oxley <secoif@gmail.com> (unit.io)",
   "name": "mongoose-tools",
   "description": "Small number of tools we share across mongoose projects.",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "repository": {
     "type": "git",
     "url": "git://github.com/secoif/mongoose-tools.git"
@@ -11,7 +11,7 @@
     "test": "mocha --ui tdd test/*/*"
   },
   "engines": {
-    "node": "~0.6.6"
+    "node": "~0.4 || ~0.6"
   },
   "dependencies": {
     "mongoose": "~2.4.9",
