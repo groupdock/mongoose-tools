@@ -4,7 +4,6 @@ require('sugar')
 
 var mongoose = require('mongoose')
 var Schema = mongoose.Schema
-var testCase = require('nodeunit').testCase
 var useTimeStamps = require('../../plugins/timestamps')
 var h = require('../../helpers')
 var assert = require('chai').assert

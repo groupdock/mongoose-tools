@@ -2,7 +2,7 @@
   "author": "Tim Oxley <secoif@gmail.com> (unit.io)",
   "name": "mongoose-tools",
   "description": "Small number of tools we share across mongoose projects.",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "repository": {
     "type": "git",
     "url": "git://github.com/secoif/mongoose-tools.git"
