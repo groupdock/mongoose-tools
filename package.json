@@ -14,11 +14,11 @@
     "node": "~0.4 || ~0.6"
   },
   "dependencies": {
-    "mongoose": "~2.4.9",
     "underscore": "~1.2.4",
     "async": "~0.1.15"
   },
   "devDependencies": {
+    "mongoose": "~2.4.9",
     "chai": "~0.1.6",
     "mocha": "~0.8.1",
     "sugar": "~1.1.3"
