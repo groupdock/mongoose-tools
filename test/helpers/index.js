@@ -1,15 +1,14 @@
 var assert = require('chai').assert
 var mongoose = require('mongoose')
-var helper = require('../../helpers/index')
 var async = require('async')
 
+var Helper = require('../../helpers/index')
+var helper = new Helper(mongoose)
 
 suite('helper', function() {
   setup(function(done) {
-    mongoose.connection.on('open', function() {
-      done()
-    })
-    mongoose.connect('mongodb://localhost/mongoose-toolbox')
+    mongoose.connect('mongodb://localhost/mongoose-tools')
+    done()
   })
   teardown(function(done) {
     helper.dropCollections(done)
@@ -18,7 +17,7 @@ suite('helper', function() {
     var testSchema, testModels, testCollections
     var NUM_COLLECTIONS = 5
     var NUM_DATAS = 5
-    
+
     setup(function(done) {
       testModels = []
       testCollections = []

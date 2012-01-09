@@ -5,8 +5,12 @@ require('sugar')
 var mongoose = require('mongoose')
 var Schema = mongoose.Schema
 var useTimeStamps = require('../../plugins/timestamps')
-var h = require('../../helpers')
+
 var assert = require('chai').assert
+
+var Helper = require('../../helpers/index')
+var helper = new Helper(mongoose)
+
 
 mongoose.connect('mongodb://localhost/mongoose-toolbox')
 
@@ -16,7 +20,7 @@ var TimestampTest = mongoose.model('TimestampTest', TimestampTestSchema)
 
 suite('timestamps', function() {
   setup(function(done) {
-    h.dropCollections(done)
+    helper.dropCollections(done)
   })
   test('will set createdAt to now', function(done) {
     var timeStampTest = new TimestampTest()
