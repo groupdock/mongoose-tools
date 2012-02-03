@@ -2,10 +2,10 @@
   "author": "Tim Oxley <secoif@gmail.com> (unit.io)",
   "name": "mongoose-tools",
   "description": "Small number of tools we share across mongoose projects.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "repository": {
     "type": "git",
-    "url": "git://github.com/secoif/mongoose-tools.git"
+    "url": "git://github.com/groupdock/mongoose-tools.git"
   },
   "scripts": {
     "test": "mocha --ui tdd test/index.js test/helpers/* test/plugins/*"
@@ -22,5 +22,8 @@
     "chai": "~0.1.6",
     "mocha": "~0.8.1",
     "sugar": "~1.1.3"
-  }
+  },
+  "optionalDependencies": {},
+  "homepage": "https://github.com/groupdock/mongoose-tools",
+  "main": "index.js"
 }
