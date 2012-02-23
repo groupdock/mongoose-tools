@@ -6,4 +6,5 @@ exports.helpers = function(mongoose) {
 
 exports.plugins = {}
 exports.plugins.timestamps = require('./plugins/timestamps')
+exports.plugins.filter = require('./plugins/filter')
 

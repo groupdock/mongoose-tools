@@ -17,6 +17,7 @@ describe('module', function() {
     var mongooseTools = require('../index')
     assert.ok(mongooseTools.plugins)
     assert.ok(mongooseTools.plugins.timestamps)
+    assert.ok(mongooseTools.plugins.filter)
   })
   it('passes mongoose to helper', function() {
     var mongooseHelpers = require('../index').helpers(mockMongoose)
