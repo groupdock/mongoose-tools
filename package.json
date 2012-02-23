@@ -18,7 +18,7 @@
     "async": "~0.1.15"
   },
   "devDependencies": {
-    "mongoose": "~2.4.9",
+    "mongoose": "~2.5.9",
     "chai": "~0.1.6",
     "mocha": "~0.8.1",
     "sugar": "~1.1.3"
