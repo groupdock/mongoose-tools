@@ -5,20 +5,20 @@ var async = require('async')
 var Helper = require('../../helpers/index')
 var helper = new Helper(mongoose)
 
-suite('helper', function() {
-  setup(function(done) {
+describe('helper', function() {
+  before(function(done) {
     mongoose.connect('mongodb://localhost/mongoose-tools')
     done()
   })
-  teardown(function(done) {
+  after(function(done) {
     helper.dropCollections(done)
   })
-  suite('dropCollections', function() {
+  describe('dropCollections', function() {
     var testSchema, testModels, testCollections
     var NUM_COLLECTIONS = 5
     var NUM_DATAS = 5
 
-    setup(function(done) {
+    before(function(done) {
       testModels = []
       testCollections = []
       testSchema = new mongoose.Schema({
@@ -40,7 +40,7 @@ suite('helper', function() {
         done()
       })
     })
-    test('will drop collections', function(done) {
+    it('will drop collections', function(done) {
       helper.dropCollections(function() {
         async.forEach(testCollections, function(collection, callback) {
           collection.count(function(err, count) {

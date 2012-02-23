@@ -11,18 +11,17 @@ var assert = require('chai').assert
 var Helper = require('../../helpers/index')
 var helper = new Helper(mongoose)
 
-
 mongoose.connect('mongodb://localhost/mongoose-toolbox')
 
 var TimestampTestSchema = new Schema({name: String})
 TimestampTestSchema.plugin(useTimeStamps)
 var TimestampTest = mongoose.model('TimestampTest', TimestampTestSchema)
 
-suite('timestamps', function() {
-  setup(function(done) {
+describe('timestamps', function() {
+  before(function(done) {
     helper.dropCollections(done)
   })
-  test('will set createdAt to now', function(done) {
+  it('will set createdAt to now', function(done) {
     var timeStampTest = new TimestampTest()
     timeStampTest.save(function(err, data) {
       if (err){throw err}
@@ -31,7 +30,7 @@ suite('timestamps', function() {
       done()
     })
   })
-  test('will set updatedAt to now', function(done) {
+  it('will set updatedAt to now', function(done) {
     var timeStampTest = new TimestampTest()
     timeStampTest.save(function(err, data) {
       if (err){throw err}
@@ -42,7 +41,7 @@ suite('timestamps', function() {
       done()
     })
   })
-  test('will set updatedAt on change', function(done) {
+  it('will set updatedAt on change', function(done) {
     var timeStampTest = new TimestampTest()
     timeStampTest.save(function(err, data) {
       if (err){throw err}
@@ -58,7 +57,7 @@ suite('timestamps', function() {
       })
     })
   })
-  test('will not change createdAt on change', function(done) {
+  it('will not change createdAt on change', function(done) {
     var timeStampTest = new TimestampTest()
     timeStampTest.save(function(err, data) {
       if (err){throw err}
@@ -73,7 +72,7 @@ suite('timestamps', function() {
       })
     })
   })
-  test('can change createdAt on creation', function(done) {
+  it('can change createdAt on creation', function(done) {
     var timeStampTest = new TimestampTest()
     var yesterday = Date.create('yesterday')
     timeStampTest.createdAt = yesterday
@@ -83,7 +82,7 @@ suite('timestamps', function() {
       done()
     })
   })
-  test('can retrieve changed createdAt from db', function(done) {
+  it('can retrieve changed createdAt from db', function(done) {
     var timeStampTest = new TimestampTest()
     var yesterday = Date.create('yesterday')
     timeStampTest.createdAt = yesterday

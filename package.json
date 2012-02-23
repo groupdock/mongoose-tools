@@ -8,7 +8,7 @@
     "url": "git://github.com/groupdock/mongoose-tools.git"
   },
   "scripts": {
-    "test": "mocha --ui tdd test/index.js test/helpers/* test/plugins/*"
+    "test": "mocha -R spec test/index.js test/helpers/* test/plugins/*"
   },
   "engines": {
     "node": "~0.4 || ~0.6"
