@@ -36,8 +36,8 @@ describe('timestamps', function() {
       if (err){throw err}
       var now = Date.create('now')
       assert.ok(timeStampTest.updatedAt)
-      assert.ok(timeStampTest.updatedAt.is('now', 2000))
-      assert.ok(!timeStampTest.updatedAt.is(now.advance(10000), 2000))
+      assert.ok(timeStampTest.updatedAt.is('now', 100))
+      assert.ok(!timeStampTest.updatedAt.is(now.advance(5000), 100))
       done()
     })
   })
@@ -51,9 +51,9 @@ describe('timestamps', function() {
 
         setTimeout(function() {
           assert.ok(timeStampTest.updatedAt)
-          assert.ok(timeStampTest.updatedAt.is('now', 2000))
+          assert.ok(timeStampTest.updatedAt.is('now', 100))
           done()
-        }, 500)
+        }, 10)
       })
     })
   })
@@ -68,7 +68,7 @@ describe('timestamps', function() {
         setTimeout(function() {
           assert.equal(timeStampTest.createdAt, createdAt)
           done()
-        }, 500)
+        }, 10)
       })
     })
   })
