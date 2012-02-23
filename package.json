@@ -1,7 +1,7 @@
 {
   "author": "Tim Oxley <secoif@gmail.com> (unit.io)",
   "name": "mongoose-tools",
-  "description": "Small number of tools we share across mongoose projects.",
+  "description": "Simple collection of mongoose plugins and utilities.",
   "version": "0.2.0",
   "repository": {
     "type": "git",
